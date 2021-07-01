@@ -1,4 +1,4 @@
-
+<div class="row">
 <div class="col-md-4  thumb"  >
 
 <a data-fancybox="gallery" ><br>
@@ -10,4 +10,24 @@
 <div class="col-md-8" ><br><br>
 <%= @page.text %>
 </div>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+<h3>Оставить отзыв</h3>
+
+<%= form_for :comments do |f| %>
+
+<%= f.text_field :author %><br><br>
+<%= f.text_area   :body %><br>
+<%= f.submit 'Add' %>
+
+<% end %>
+</div>
+
 
