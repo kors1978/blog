@@ -1,0 +1,20 @@
+<div class="row">
+
+<% @page.each do |p| %>
+
+<div class="col-md-4 thumb"  >
+<br>
+<%=  link_to (image_tag p.image.url if p.image?), page_path(p)  %>
+</div>
+<% end %>
+
+</div> <!--end.row-->
+
+
+<div class="col-md " style="text-align: center;">
+	
+<%= paginate @page %>
+
+</div>
+
+
