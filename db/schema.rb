@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(version: 2021_07_01_181506) do
   create_table "comments", force: :cascade do |t|
     t.string "author"
     t.string "body"
+    t.integer "page_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["page_id"], name: "index_comments_on_page_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -38,4 +40,5 @@ ActiveRecord::Schema.define(version: 2021_07_01_181506) do
     t.string "image"
   end
 
+  add_foreign_key "comments", "pages"
 end

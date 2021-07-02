@@ -13,20 +13,38 @@
 
 </div>
 
-
-
-
-
+<br>
 
 <div class="row">
-<h3>Оставить отзыв</h3>
 
-<%= form_for :comments do |f| %>
+<% @page.comments.each do |comment| %>
+    
+    <h5 style="color: green; font-family: Verdana; font-size: 18px"> Автор</h5>
+    <%= comment.author %><br>
+    <h5 style="color: green; font-family: Verdana; font-size: 18px">Отзыв</h5>
+    <%= comment.body %>
+ <hr>
 
-<%= f.text_field :author %><br><br>
-<%= f.text_area   :body %><br>
-<%= f.submit 'Add' %>
+<% end %>
+</div>
 
+<br>
+
+<div class="row" >
+
+<%= form_with model: [ @page, @page.comments.build ] do |f| %>
+ 
+ <p>
+   <%= f.text_field :author, placeholder: 'Ваше имя' %>
+ </p>
+ 
+ <p>
+   <%= f.text_area :body, size: '85x10', placeholder: 'Ваш отзыв' %>
+ </p>
+  
+  <p>
+    <%= f.submit 'Оставить отзыв' %>
+  </p>
 <% end %>
 </div>
 
