@@ -1,19 +1,38 @@
-<div class="row">
-<div class="col-md-4  thumb"  >
+<div class="row" >
+ 
+<div class="col-md-4 thumb"  >
 
 <a data-fancybox="gallery" ><br>
-<%= image_tag @page.image.url if @page.image? %>
+<%= image_tag @page.image.url if @page.image?  %>
 </a>
-
 </div>
 
-<div class="col-md-8" ><br><br>
-<%= @page.text %>
+<div class="col-md-4 thumb"  >
+<a data-fancybox="gallery" ><br>
+<%= image_tag @page.imagetwo.url if @page.imagetwo?  %>
+</a>
+</div>
+
+<div class="col-md-4 thumb"  >
+<a data-fancybox="gallery" ><br>
+<%= image_tag @page.imagethree.url if @page.imagethree?  %>
+</a>
 </div>
 
 </div><!--end row--> 
+<br>
+
+<div class="row" style="font-size: 18px; font-family: Verdana">
+  <h4>Описание</h4>
+  <%= @page.text %>
+</div><!--end row--> 
 
 <br>
+
+<div class="row" style="text-align: center; 
+color: green; background-color: PaleTurquoise">
+<h3>Комментарии</h3>
+</div>
 
 <div class="row">
 

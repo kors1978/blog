@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_admin!, only: [:new]
+  #before_action :authenticate_admin!, only: [:new]
   def index
   	@page = Page.order('created_at DESC').page(params[:page]).per(6)
   end
@@ -25,6 +25,6 @@ class PagesController < ApplicationController
   private
   
   def iz_stroki
-  	params.require(:page).permit(:text, :image)
+  	params.require(:page).permit(:text, :image, :imagetwo, :imagethree)
   end
 end
