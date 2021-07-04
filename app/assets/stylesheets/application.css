@@ -17,14 +17,13 @@
     .thumb img {
             -webkit-filter: grayscale(0);
             filter: none;
-            border-radius: 5px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 5px;
-
+            border-radius: 1px;
+            border: 5px solid #ddd;
+            padding: 4px;
             width: 310px;
             height: 310px;
             object-fit: cover;
+            
             }
 
     .thumb img:hover {

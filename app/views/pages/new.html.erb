@@ -1,8 +1,19 @@
 <h3>Форма для добавления картинки</h3>
 
 <%= form_for :page, url: pages_path, html: { multipart: true } do |f| %>
-<%= f.text_field :text %><br><br>
+
+<% if @page.errors.any? %>
+
+      <% @page.errors.full_messages.each do |error| %>
+      <div class="alert alert-danger"><%= error %> </div>
+       
+  <% end %>
+<% end %>
+  
+
+
+<%= f.text_area :text, size: '60x10', placeholder: 'Описание' %><br><br>
 <%= f.file_field :image %><br><br>
-<%= f.submit 'Загрузить картинку' %>
+<%= f.submit 'Загрузить' %>
 
 <% end %>

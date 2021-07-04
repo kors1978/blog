@@ -5,17 +5,21 @@ class PagesController < ApplicationController
   end
 
   def new
+  @page = Page.new
   end
 
   def show
   	@page = Page.find(params[:id])
-
   end
 
   def create
   	@page = Page.new(iz_stroki)
-  	@page.save
+  	
+    if @page.save
   	redirect_to @page
+    else
+    render action: 'new'
+    end
   end
   
   private
