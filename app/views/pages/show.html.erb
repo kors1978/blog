@@ -23,48 +23,60 @@
 <br>
 
 <div class="row" style="font-size: 18px; font-family: Verdana">
-  <h4>Описание</h4>
+  <h3 style="color: green" >Описание</h3>
   <%= @page.text %>
 </div><!--end row--> 
 
 <br>
 
-<div class="row" style="text-align: center; 
-color: green; background-color: PaleTurquoise">
+<div class="row" 
+style="text-align: center; color: #FFFFFF; background-color: SeaGreen;">
 <h3>Комментарии</h3>
-</div>
+</div><!--end row--> <br>
 
 <div class="row">
 
 <% @page.comments.each do |comment| %>
-    
-    <h5 style="color: green; font-family: Verdana; font-size: 18px"> Автор</h5>
+
+<div class="col-md" style="border: 1px solid SeaGreen">    
+
+   <h5 style="color: green; font-family: Verdana; font-size: 18px; text-align: center;"> Автор </h5>
+   
+   <div style="text-align: center; font-family: Verdana">
     <%= comment.author %><br>
-    <h5 style="color: green; font-family: Verdana; font-size: 18px">Отзыв</h5>
-    <%= comment.body %>
- <hr>
+   </div>
 
-<% end %>
-</div><!--end row--> 
+   <h5 style="color: green; font-family: Verdana; font-size: 18px; text-align: center;"> Отзыв </h5>
 
+    <div style="text-align: center; font-family: Verdana ">
+     <%= comment.body %>
+    </div>
 
-<br>
+</div><!--end col--> <br> 
+  <% end %>
+</div><!--end row--> <br>
+
+<div class="row" 
+style="text-align: center; color: #FFFFFF; background-color: Coral;">
+<h3>Ваш отзыв</h3>
+</div><!--end row--> <br>
 
 <div class="row" >
 
 <%= form_with model: [ @page, @page.comments.build ] do |f| %>
  
  <p>
-   <%= f.text_field :author, placeholder: 'Ваше имя' %>
+   <%= f.text_field :author, placeholder: 'Напишите имя' %>
  </p>
  
  <p>
-   <%= f.text_area :body, size: '85x10', placeholder: 'Ваш отзыв' %>
+   <%= f.text_area :body, size: '85x10', placeholder: 'Напишите текст' %>
  </p>
   
   <p>
-    <%= f.submit 'Оставить отзыв', class: "btn btn-success" %>
+    <%= f.submit 'Добавить', class: "btn btn-success" %>
   </p>
+
 <% end %>
 </div><!--end row--> 
 
