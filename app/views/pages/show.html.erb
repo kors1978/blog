@@ -63,7 +63,7 @@ style="text-align: center; color: #FFFFFF; background-color: Coral;">
 
 <div class="row" >
 
-<%= form_with model: [ @page, @page.comments.build ] do |f| %>
+<%= form_for([ @page, @page.comments.build ]) do |f| %>
  
  <p>
    <%= f.text_field :author, placeholder: 'Напишите имя' %>
@@ -78,7 +78,12 @@ style="text-align: center; color: #FFFFFF; background-color: Coral;">
   </p>
 
 <% end %>
+
+
+
 </div><!--end row--> 
+
+
 
 
 

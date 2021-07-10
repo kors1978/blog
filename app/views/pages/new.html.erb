@@ -2,6 +2,7 @@
 
 <%= form_for :page, url: pages_path, html: { multipart: true } do |f| %>
 
+<!-- Вывод ошибки-->
 <% if @page.errors.any? %>
 
       <% @page.errors.full_messages.each do |error| %>

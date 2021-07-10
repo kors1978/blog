@@ -1,1 +1,30 @@
-<h2>ошибка</h2>
+<br>
+<div class="row">
+	<!-- Вывод ошибки-->
+<% if @proverka.errors.any? %>
+
+      <% @proverka.errors.full_messages.each do |error| %>
+      <div class="alert alert-danger"><%= error %> </div>
+       
+  <% end %>
+<% end %>
+</div>
+
+
+<div class="row" >
+
+<%= form_for([ @page, @page.comments.build ]) do |f| %>
+ 
+ <p>
+   <%= f.text_field :author, placeholder: 'Напишите имя' %>
+ </p>
+ 
+ <p>
+   <%= f.text_area :body, size: '85x10', placeholder: 'Напишите текст' %>
+ </p>
+  
+  <p>
+    <%= f.submit 'Добавить', class: "btn btn-success" %>
+  </p>
+
+<% end %>

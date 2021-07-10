@@ -4,4 +4,5 @@ class Page < ApplicationRecord
 	mount_uploader :imagethree, ImageUploader
 	has_many :comments
 	validates :text, presence: true
+	
 end
