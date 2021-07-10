@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_07_04_172801) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_07_04_172801) do
   create_table "comments", force: :cascade do |t|
     t.string "author"
     t.string "body"
-    t.integer "page_id", null: false
+    t.bigint "page_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["page_id"], name: "index_comments_on_page_id"
@@ -42,5 +45,4 @@ ActiveRecord::Schema.define(version: 2021_07_04_172801) do
     t.string "imagethree"
   end
 
-  add_foreign_key "comments", "pages"
 end
