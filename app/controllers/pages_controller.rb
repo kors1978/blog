@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
-  #before_action :authenticate_admin!, only: [:new]
+  before_action :authenticate_admin!, only: [:new]
   def index
-  	@page = Page.order('created_at DESC').page(params[:page]).per(5)
+  	@page = Page.order('created_at DESC').page(params[:page]).per(6)
   end
 
   def new

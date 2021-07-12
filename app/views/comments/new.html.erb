@@ -1,15 +1,7 @@
 <br>
-<div class="row">
-	<!-- Вывод ошибки-->
-<% if @proverka.errors.any? %>
-
-      <% @proverka.errors.full_messages.each do |error| %>
-      <div class="alert alert-danger"><%= error %> </div>
-       
-  <% end %>
-<% end %>
-</div>
-
+<!-- Вывод ошибок -->
+<%= render 'comments/errors' %>
+<!-------------------------------------------------------------->
 
 <div class="row" >
 

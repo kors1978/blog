@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
 
- 
-  
-
   def create
     @page = Page.find(params[:page_id])
 
@@ -10,7 +7,7 @@ class CommentsController < ApplicationController
      if @proverka.valid?
      redirect_to @page
      else
- 	 render action: 'new'
+ 	   render action: 'new'
      end
    end
 

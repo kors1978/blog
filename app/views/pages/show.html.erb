@@ -1,3 +1,4 @@
+<!-- Вывод картинок на странице -->
 <div class="row" >
  
 <div class="col-md-4 thumb"  >
@@ -22,11 +23,12 @@
 </div><!--end row--> 
 <br>
 
+<!-------------------------------------------------------------->
+
 <div class="row" style="font-size: 18px; font-family: Verdana">
   <h3 style="color: green" >Описание</h3>
   <%= @page.text %>
 </div><!--end row--> 
-
 <br>
 
 <div class="row" 
@@ -34,8 +36,8 @@ style="text-align: center; color: #FFFFFF; background-color: SeaGreen;">
 <h3>Комментарии</h3>
 </div><!--end row--> <br>
 
+<!-- Вывод комментариев-->
 <div class="row">
-
 <% @page.comments.each do |comment| %>
 
 <div class="col-md" style="border: 1px solid SeaGreen">    
@@ -52,17 +54,19 @@ style="text-align: center; color: #FFFFFF; background-color: SeaGreen;">
      <%= comment.body %>
     </div>
 
-</div><!--end col--> <br> 
+   </div><!--end col--> <br> 
   <% end %>
 </div><!--end row--> <br>
+
+<!-------------------------------------------------------------->
 
 <div class="row" 
 style="text-align: center; color: #FFFFFF; background-color: Coral;">
 <h3>Ваш отзыв</h3>
 </div><!--end row--> <br>
 
+<!-- Форма для комментариев-->
 <div class="row" >
-
 <%= form_for([ @page, @page.comments.build ]) do |f| %>
  
  <p>
@@ -79,10 +83,9 @@ style="text-align: center; color: #FFFFFF; background-color: Coral;">
 
 <% end %>
 
-
-
 </div><!--end row--> 
 
+<!-------------------------------------------------------------->
 
 
 

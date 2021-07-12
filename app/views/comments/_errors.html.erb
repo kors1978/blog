@@ -1,0 +1,11 @@
+<!-- Вывод ошибок из формы для добавления комментариев-->
+<div class="row">
+
+<% if @proverka.errors.any? %>
+
+      <% @proverka.errors.full_messages.each do |error| %>
+      <div class="alert alert-danger"><%= error %> </div>
+       
+  <% end %>
+<% end %>
+</div>

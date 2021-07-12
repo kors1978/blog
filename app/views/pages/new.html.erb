@@ -2,16 +2,9 @@
 
 <%= form_for :page, url: pages_path, html: { multipart: true } do |f| %>
 
-<!-- Вывод ошибки-->
-<% if @page.errors.any? %>
-
-      <% @page.errors.full_messages.each do |error| %>
-      <div class="alert alert-danger"><%= error %> </div>
-       
-  <% end %>
-<% end %>
-  
-
+<!-- Вывод ошибок -->
+<%= render 'pages/errors' %>
+<!-------------------------------------------------------------->
 
 <%= f.text_area :text, size: '60x10', placeholder: 'Описание' %><br><br>
 <%= f.file_field :image %><br><br>
