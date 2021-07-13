@@ -41,5 +41,5 @@ production:
   host: localhost
   pool: 5
   username: postgres
-  password: <%= ENV['MyDatabase_Password'] %>
+  password: <%= ENV['mydatabase_Password'] %>
   
