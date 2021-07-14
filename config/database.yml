@@ -33,7 +33,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: mydatabase
-  host: localhost
+  #host: localhost
   pool: 5
   username: postgres
   password: <%= ENV['mydatabase_Password'] %>
