@@ -64,7 +64,7 @@ gem 'carrierwave'
 gem "mini_magick"
 
 gem 'kaminari'
-gem 'bootstrap-kaminari-views'
+#gem 'bootstrap-kaminari-views'
 
 gem 'devise'
 
