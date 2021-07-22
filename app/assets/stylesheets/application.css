@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */ 
-
+body {
+        background-color: Linen
+ }
+ /*-------------------------*/
  /*Стили для вывода картинок на главной странице*/
 
    .thumb img {
@@ -37,7 +40,4 @@
             padding: 5px;
         }
 /*-------------------------*/
- body {
-        background-color: Linen
- }
- /*-------------------------*/
+ 
