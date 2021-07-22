@@ -61,7 +61,7 @@ style="text-align: center; color: #FFFFFF; background-color: SeaGreen;">
 <!-------------------------------------------------------------->
 
 <div class="row" 
-style="text-align: center; color: #FFFFFF; background-color: Coral;">
+style="text-align: center; color: #FFFFFF; background-color: Coral">
 <h3>Ваш отзыв</h3>
 </div><!--end row--> <br>
 
@@ -70,7 +70,7 @@ style="text-align: center; color: #FFFFFF; background-color: Coral;">
 <%= form_for([ @page, @page.comments.build ]) do |f| %>
  
  <p>
-   <%= f.text_field :author, placeholder: 'Напишите имя' %>
+   <%= f.text_field :author, placeholder: 'Автор' %>
  </p>
  
  <p>
@@ -78,17 +78,13 @@ style="text-align: center; color: #FFFFFF; background-color: Coral;">
  </p>
   
   <p>
-    <%= f.submit 'Добавить', class: "btn btn-success" %>
+    <%= f.submit 'Добавить', class: "button-4" %>
   </p>
 
-<% end %>
-
-
-
+  <% end %>
 </div><!--end row--> 
 
 <!-------------------------------------------------------------->
-
-
+ 
 
 

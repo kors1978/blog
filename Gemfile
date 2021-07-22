@@ -67,7 +67,8 @@ gem 'kaminari'
 #gem 'bootstrap-kaminari-views'
 
 gem 'devise'
-gem 'figaro'
+#gem 'figaro'
+gem 'russian'
 
 
 

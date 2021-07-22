@@ -1,37 +1,38 @@
+<!-- Форма входа для администратора-->
+<br>
+<div class="row" style="margin-top: 50px">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<div id="range1">
+  <div class="outer">
+    <div class="middle">
+       <div class="inner">
+         <div class="login-wr">
+          <h2>Вход</h2>
+          
+  <div class="form">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     <%= f.text_field :email,  autofocus: true, autocomplete: "email", placeholder: "Email"  %>
+       <%= f.text_field :password, autocomplete: "current-password",placeholder: "Пароль"  %>
+           <%= f.button 'Авторизация' %>
+    <% end %>
+  </div><!-- end.form -->
+    </div><!-- end.login-wr -->
+      </div><!-- end.inner -->
+        </div><!-- end.middle -->
+         </div><!-- end.outer -->
+           </div><!-- end.range1 -->
+
+</div> <!-- end.col-md-4 -->
+
+<div class="col-md-4"></div>
+
+</div> <!-- end.row -->
+
+
+
+
+
+
+
 <%= render "devise/shared/links" %>
-<div class="row">
-
-<div class="col-md-4"></div>
-
-<div class="col-md-4" style="background-color: Gainsboro; margin-top: 50px; text-align: center; line-height: 30px" >
-<h3 style="margin-top: 40px">Вход для администратора</h3>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email"  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <!--<% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>-->
-    <br>
-  <div class="actions" style="margin-bottom: 15px">
-    <%= f.submit "Вход", class: "btn btn-success" %>
-  </div>
-
-<% end %>
-</div>
-</div>
-
-<div class="col-md-4"></div>
-
