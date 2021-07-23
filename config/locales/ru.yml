@@ -1,8 +1,13 @@
 ru:
- models:
- page:
- attributes:
-  text: 'Поле'
-  author: 'Автор'
-  body: 'Поле текст'
+  models:
+  page:
+  attributes:
+    text: 'Поле'
+    author: 'Автор'
+    body: 'Поле текст'
+
+  views:
+  pagination:
+  attributes:
+    last: 'Влево' 
  
