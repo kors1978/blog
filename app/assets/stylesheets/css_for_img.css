@@ -1,0 +1,28 @@
+body {
+        background-color: Linen
+ }
+ /*-------------------------*/
+ /*Стили для вывода картинок на главной странице*/
+
+   .thumb img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+            border-radius: 1px;
+            border: 5px solid #ddd;
+            padding: 4px;
+            width: 310px;
+            height: 310px;
+            object-fit: cover;
+            
+            }
+
+    .thumb img:hover {
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+
+    .thumb {
+            padding: 5px;
+        }
+/*-------------------------*/
+ 
