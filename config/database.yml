@@ -31,10 +31,6 @@ test:
   production:
   <<: *default
   
-  adapter: postgresql
-  encoding: unicode
   database: postgres://dfphdgdvmcwjzf:a8ad59c71b20f74f53e6eec41963c5e447689a565d1d447d3170e4ff23e1010b@ec2-34-204-128-77.compute-1.amazonaws.com:5432/d47ti8lo87o6dn
-  host: ec2-34-204-128-77.compute-1.amazonaws.com
   pool: 5
-  port: 5432
   url: <%= ENV['DATABASE_URL'] %>
