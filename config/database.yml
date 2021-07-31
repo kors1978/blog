@@ -28,6 +28,7 @@ test:
   database: mydatabase
 
 production:
+<<: *default
 url: <%= ENV['DATABASE_URL'] %>
 
   #adapter: postgresql
