@@ -37,5 +37,4 @@ test:
   host: ec2-34-204-128-77.compute-1.amazonaws.com
   pool: 5
   port: 5432
-  username: dfphdgdvmcwjzf
-  password: a8ad59c71b20f74f53e6eec41963c5e447689a565d1d447d3170e4ff23e1010b
+  url: <%= ENV['DATABASE_URL'] %>
