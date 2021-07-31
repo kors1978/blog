@@ -28,9 +28,21 @@ test:
   database: mydatabase
 
 
-  production:
-  <<: *default
   
-  database: postgres://dfphdgdvmcwjzf:a8ad59c71b20f74f53e6eec41963c5e447689a565d1d447d3170e4ff23e1010b@ec2-34-204-128-77.compute-1.amazonaws.com:5432/d47ti8lo87o6dn
-  pool: 5
+
+
+# On Heroku and other platform providers, you may have a full connection URL
+# available as an environment variable. For example:
+#
+# DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#
+# You can use this database configuration with:
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
+production:
+  <<: *default
+  database: postgres://lsjyiqwylyijih:4d71811d13f631947bd1e29012d46a8185189d08aa8b6ede8d28ca857dec98d7@ec2-35-168-145-180.compute-1.amazonaws.com:5432/d1d4pplnajj722
   url: <%= ENV['DATABASE_URL'] %>
+  pool: 5
