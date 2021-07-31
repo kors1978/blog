@@ -35,6 +35,8 @@ production:
   database: dammsje8fgomb8
   host: ec2-35-174-122-153.compute-1.amazonaws.com 
   pool: 5
-  username: postgres
-  password: lila
+  port: 5432
+  URI: postgres://ibslaxojnxyutv:22e3091e60df66760f57e549de6b9ba1431fe2a07050f06deb8527521c3c24e3@ec2-35-174-122-153.compute-1.amazonaws.com:5432/dammsje8fgomb8
+  username: ibslaxojnxyutv
+  password: 22e3091e60df66760f57e549de6b9ba1431fe2a07050f06deb8527521c3c24e3
   #password: <%= ENV['mydatabase_Password'] %>
