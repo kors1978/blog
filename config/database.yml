@@ -43,6 +43,6 @@ test:
 #
 production:
   <<: *default
-  database: postgres://lsjyiqwylyijih:4d71811d13f631947bd1e29012d46a8185189d08aa8b6ede8d28ca857dec98d7@ec2-35-168-145-180.compute-1.amazonaws.com:5432/d1d4pplnajj722
+  database: d1d4pplnajj722
   url: <%= ENV['DATABASE_URL'] %>
   pool: 5
