@@ -43,6 +43,7 @@ test:
 #
 production:
   <<: *default
-  database: d1d4pplnajj722
+  adapter: postgresql
+  encoding: unicode
   url: <%= ENV['DATABASE_URL'] %>
   pool: 5
